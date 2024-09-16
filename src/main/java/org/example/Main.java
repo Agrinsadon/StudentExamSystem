@@ -23,6 +23,8 @@ public class Main {
         for (Student student : students) {
             System.out.println("Student: " + student.getName());
             student.getExams().forEach(exam -> System.out.println(" - Exam Grade: " + exam.getGrade()));
+            student.getExams().forEach(exam -> System.out.println(" - Exam Created At: " + exam.getCreatedAt()));
+            student.getExams().forEach(exam -> System.out.println(" - Exam Grade Saving Date: " + exam.getGradeSavingDate()));
         }
     }
 }
