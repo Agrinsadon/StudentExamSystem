@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="student_exam_system">
+        <class>org.example.Student</class>
+        <class>org.example.Exam</class>
+
+        <!-- Database settings -->
+        <properties>
+            <!-- MariaDB Database Connection Settings -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/student_exam_system"/>
+            <property name="jakarta.persistence.jdbc.user" value="agrin"/>
+            <property name="jakarta.persistence.jdbc.password" value="Hasar123"/>
+
+            <!-- Hibernate settings -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
